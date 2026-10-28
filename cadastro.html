@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Página de cadastro para solicitar informações sobre as Testemunhas de Jeová.">
+
+    <title>Cadastro | Testemunhas de Jeová</title>
+
+    <link rel="stylesheet" href="./css/cadastro.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+        <div class="logo">
+            <span>✦</span>
+            <h1>Testemunhas de Jeová</h1>
+        </div>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="biblia.html">Bíblia</a>
+            <a href="publicacoes.html">Publicações</a>
+            <a href="reunioes.html">Reuniões</a>
+            <a href="sobrenos.html">Sobre Nós</a>
+            <a href="cadastro.html" class="ativo">Cadastro</a>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+        <section class="destaque-cadastro">
+            <div class="texto-destaque">
+               
+            </div>
+        </section>
+
+        <!-- FORMULÁRIO -->
+        <section class="area-cadastro">
+
+            <div class="cartao-cadastro">
+
+                <div class="titulo-formulario">
+                    <h2>Formulário de contato</h2>
+
+                    <p>
+                        Preencha os campos abaixo para registrar sua solicitação.
+                    </p>
+                </div>
+
+                <form id="formCadastro">
+
+                    <div class="campo">
+                        <label for="nome">Nome completo</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite seu nome"
+                            autocomplete="name"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="exemplo@email.com"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefone">Telefone (opcional)</label>
+                        <input
+                            type="tel"
+                            id="telefone"
+                            name="telefone"
+                            placeholder="Digite seu telefone"
+                            autocomplete="tel"
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="assunto">O que você gostaria de conhecer?</label>
+
+                        <select id="assunto" name="assunto" required>
+                            <option value="">Selecione uma opção</option>
+                            <option value="biblia">Estudo da Bíblia</option>
+                            <option value="reunioes">Reuniões</option>
+                            <option value="publicacoes">Publicações</option>
+                            <option value="crencas">Nossas crenças</option>
+                            <option value="outros">Outras informações</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensagem">Mensagem (opcional)</label>
+                        <textarea
+                            id="mensagem"
+                            name="mensagem"
+                            rows="4"
+                            placeholder="Escreva sua dúvida ou solicitação..."
+                        ></textarea>
+                    </div>
+
+                    <div class="aviso-privacidade">
+                        <p>
+                            Envie apenas informações necessárias para sua solicitação.
+                            Este formulário de demonstração não envia os dados para
+                            um servidor.
+                        </p>
+                    </div>
+
+                    <button type="submit" class="botao">
+                        Enviar cadastro
+                    </button>
+
+                    <p id="mensagemResultado" role="status" aria-live="polite"></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>© 2026 | Site informativo independente</p>
+        <p>Para mais informações, visite o site oficial JW.ORG.</p>
+    </footer>
+
+    <!-- JAVASCRIPT GERAL -->
+    <script src="script.js"></script>
+
+    <!-- JAVASCRIPT DO FORMULÁRIO -->
+    <script>
+        const formulario = document.getElementById("formCadastro");
+        const resultado = document.getElementById("mensagemResultado");
+
+        formulario.addEventListener("submit", function(evento) {
+            evento.preventDefault();
+
+            resultado.textContent =
+                "Formulário preenchido! Esta é uma demonstração: os dados não foram enviados.";
+
+            resultado.classList.add("sucesso");
+
+            formulario.reset();
+        });
+    </script>
+
+</body>
+</html>

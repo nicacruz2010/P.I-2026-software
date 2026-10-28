@@ -1,0 +1,282 @@
+
+/* ========================================
+   CONCLUSÃO DO CADASTRO
+   TESTEMUNHAS DE JEOVÁ
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f3;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* CABEÇALHO */
+
+header {
+    background-color: #31583d;
+    color: white;
+    padding: 18px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h1 {
+    font-size: 23px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #d9e7d4;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 55px 20px;
+}
+
+/* CARTÃO DE CONCLUSÃO */
+
+.conclusao {
+    width: 100%;
+    max-width: 650px;
+    padding: 45px 35px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 28px rgba(35, 65, 40, 0.10);
+    animation: aparecer 0.8s ease;
+}
+
+/* ÍCONE DE SUCESSO */
+
+.icone-sucesso {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #e5f0e3;
+    border: 2px solid #a9c9a5;
+    color: #31583d;
+    font-size: 48px;
+    font-weight: bold;
+    animation: crescer 0.6s ease;
+}
+
+/* TÍTULOS E TEXTOS */
+
+.conclusao h2 {
+    color: #31583d;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.conclusao p {
+    color: #626262;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.conclusao .mensagem {
+    color: #31583d;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+/* BOTÃO PRINCIPAL */
+
+.botao {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 13px 25px;
+    background-color: #31583d;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.botao:hover {
+    background-color: #456f4e;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 14px rgba(49, 88, 61, 0.2);
+}
+
+/* LINK SECUNDÁRIO */
+
+.link {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
+    color: #31583d;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: #789477;
+    text-decoration: underline;
+}
+
+/* AVISO */
+
+.conclusao .aviso {
+    margin-top: 30px;
+    margin-bottom: 0;
+    padding-top: 18px;
+    border-top: 1px solid #e1e7dc;
+    font-size: 12px;
+    color: #777;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: #294b34;
+    color: white;
+    text-align: center;
+    padding: 20px 15px;
+}
+
+footer p {
+    font-size: 14px;
+    color: white;
+    margin: 0;
+}
+
+/* ANIMAÇÕES */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes crescer {
+    from {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    main {
+        padding: 35px 16px;
+    }
+
+    .conclusao {
+        padding: 35px 22px;
+    }
+
+    .conclusao h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .icone-sucesso {
+        width: 72px;
+        height: 72px;
+        font-size: 40px;
+    }
+
+    .conclusao h2 {
+        font-size: 25px;
+    }
+
+    .conclusao p {
+        font-size: 15px;
+    }
+
+    .conclusao .mensagem {
+        font-size: 17px;
+    }
+
+    .botao {
+        padding: 12px 20px;
+    }
+}
+
+/* ACESSIBILIDADE */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
