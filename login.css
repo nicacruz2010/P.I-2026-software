@@ -1,0 +1,305 @@
+
+/* ========================================
+   LOGIN - TESTEMUNHAS DE JEOVÁ
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f3;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* CABEÇALHO */
+
+header {
+    background-color: #31583d;
+    color: white;
+    padding: 18px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h1 {
+    font-size: 23px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #d9e7d4;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 18px;
+}
+
+/* CARTÃO DE LOGIN */
+
+.login-container {
+    width: 100%;
+    max-width: 430px;
+    padding: 35px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 28px rgba(35, 65, 40, 0.10);
+    text-align: center;
+    animation: aparecer 0.7s ease;
+}
+
+/* ÍCONE */
+
+.login-icone {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #e8efe5;
+    color: #31583d;
+    font-size: 32px;
+}
+
+/* TÍTULOS */
+
+.login-container h2 {
+    color: #31583d;
+    font-size: 29px;
+    margin-bottom: 5px;
+}
+
+.subtitulo {
+    color: #777;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+/* FORMULÁRIO */
+
+#formLogin {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+#formLogin label {
+    color: #31583d;
+    font-weight: bold;
+    margin: 12px 0 6px;
+}
+
+#formLogin input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d5ded2;
+    border-radius: 10px;
+    background-color: #fafbf8;
+    color: #333;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+#formLogin input:focus {
+    border-color: #66876b;
+    box-shadow: 0 0 0 3px rgba(102, 135, 107, 0.15);
+}
+
+/* BOTÃO ENTRAR */
+
+#formLogin button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 24px;
+    border: none;
+    border-radius: 10px;
+    background-color: #31583d;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+#formLogin button:hover {
+    background-color: #456f4e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(49, 88, 61, 0.2);
+}
+
+#formLogin button:active {
+    transform: scale(0.98);
+}
+
+/* MENSAGEM DO JAVASCRIPT */
+
+#mensagemLogin {
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#mensagemLogin:empty {
+    display: none;
+}
+
+#mensagemLogin.sucesso {
+    color: #285b32;
+}
+
+#mensagemLogin.erro {
+    color: #a3332b;
+}
+
+/* CADASTRO */
+
+.cadastro {
+    margin-top: 22px;
+    font-size: 14px;
+    color: #666;
+}
+
+.cadastro a,
+.voltar {
+    color: #31583d;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.cadastro a:hover,
+.voltar:hover {
+    color: #789477;
+    text-decoration: underline;
+}
+
+/* VOLTAR AO INÍCIO */
+
+.voltar {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* AVISO */
+
+.aviso {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #e1e7dc;
+    color: #888;
+    font-size: 11px;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: #294b34;
+    color: white;
+    text-align: center;
+    padding: 20px 15px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* ANIMAÇÃO */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    main {
+        padding: 30px 14px;
+    }
+
+    .login-container {
+        padding: 28px 22px;
+    }
+
+    .login-container h2 {
+        font-size: 26px;
+    }
+}
+
+/* ACESSIBILIDADE */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}

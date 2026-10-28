@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Testemunhas de Jeová</title>
+
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>✦ Testemunhas de Jeová</h1>
+
+        <nav>
+            <a href="./jw.html">Início</a>
+            <a href="./biblia.html">Bíblia</a>
+            <a href="./publicacoes.html">Publicações</a>
+            <a href="./reunioes.html">Reuniões</a>
+            <a href="./sobre.html">Sobre Nós</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="login-container">
+
+            <div class="login-icone">✦</div>
+
+            <h2>Bem-vindo!</h2>
+
+            <p class="subtitulo">
+                Entre para continuar sua visita.
+            </p>
+
+            <form id="formLogin">
+
+                <label for="email">E-mail</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Digite seu e-mail"
+                    required
+                >
+
+                <label for="senha">Senha</label>
+                <input
+                    type="password"
+                    id="senha"
+                    name="senha"
+                    placeholder="Digite sua senha"
+                    required
+                >
+
+                <button type="submit">Entrar</button>
+
+                <p id="mensagemLogin" role="status" aria-live="polite"></p>
+
+            </form>
+
+            <p class="cadastro">
+                Ainda não tem cadastro?
+                <a href="./cadastro.html">Cadastre-se</a>
+            </p>
+
+            <a href="./jw.html" class="voltar">
+                Voltar para o início
+            </a>
+
+            <p class="aviso">
+                Site independente para fins informativos,
+                não oficial das Testemunhas de Jeová.
+            </p>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 — Site informativo independente</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="login.js"></script>
+
+</body>
+</html>
